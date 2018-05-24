@@ -46,6 +46,15 @@ module.exports = {
       //filename: '[name].[chunkhash].js'
       filename: DEV ? 'bundle.js' : 'bundle.[hash:8].js',
     },
+    /*
+    externals: [
+        {
+          "jquery": {
+            root: "jquery"
+          }
+        }
+      ],
+    */
 
     resolve: {
         unsafeCache: true,

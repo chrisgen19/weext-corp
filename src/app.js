@@ -1,6 +1,8 @@
 //import 'bootstrap';
 import './scss/app.scss';
 
+import carousel from 'bootstrap/js/src/carousel.js'
+
 import notification from './js/Notification';
 
 notification.log('here we go 13');

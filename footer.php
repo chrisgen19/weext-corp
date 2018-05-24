@@ -30,6 +30,8 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+</main>
+
 <?php wp_footer(); ?>
 
 </body>
