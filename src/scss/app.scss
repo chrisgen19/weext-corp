@@ -20,14 +20,14 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */ 
 
-$body-color:green;
+$body-color:blue;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "includes/custom";
 
 body{
     background: $body-color;
-    background-image: url('./images/stub.png')
+    background-image: url('images/stub.png'); 
 }
 
 // styles.scss

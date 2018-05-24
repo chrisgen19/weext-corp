@@ -3,8 +3,8 @@ import './scss/app.scss';
 
 import notification from './js/Notification';
 
-notification.log('here we go 12');
-notification.announce('here we go 12');
+notification.log('here we go 13');
+//notification.announce('here we go 13');
 
 class Form {
     constructor(){

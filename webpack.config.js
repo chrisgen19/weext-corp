@@ -1,16 +1,16 @@
 'use strict';
 
-const DEV = process.env.NODE_ENV === 'development';
+//const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+let DEV = true;
 
 const webpack = require('webpack');
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 const AssetsPlugin = require('assets-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
-//const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+//const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
+//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+//const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const fs = require('fs');
 
 const appDirectory = fs.realpathSync(process.cwd());
@@ -48,6 +48,7 @@ module.exports = {
     },
 
     resolve: {
+        unsafeCache: true,
         modules: [
             path.join(__dirname, "js/helpers"),
             "node_modules"
@@ -73,7 +74,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: 'images/[name].[hash].[ext]'
+                            name: './images/[name].[hash].[ext]'
                         }
                     }
                 ]
@@ -81,13 +82,14 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
             },
         ]
       },
+      /*
       optimization: {
         minimizer: [
           new UglifyJsPlugin({
@@ -98,19 +100,25 @@ module.exports = {
           new OptimizeCSSAssetsPlugin({})
         ]
       },
+      */
       plugins: [
         
         // new ExtractTextPlugin('style.css'),
-        new CleanWebpackPlugin(pathsToClean, cleanOptions),
+        
+        //new CleanWebpackPlugin(pathsToClean, cleanOptions),
+        /*
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             filename: "style.css",
             chunkFilename: "style.css"
         }),
+        */
+       /*
         new AssetsPlugin({
           path: paths.appBuild,
           filename: 'assets.json',
         }),
+        */
       ]
   };
