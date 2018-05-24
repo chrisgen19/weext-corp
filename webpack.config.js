@@ -4,9 +4,9 @@
 
 let DEV = true;
 
-const webpack = require('webpack');
+//const webpack = require('webpack');
 const path = require('path');
-const AssetsPlugin = require('assets-webpack-plugin');
+//const AssetsPlugin = require('assets-webpack-plugin');
 //const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 //const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -57,6 +57,7 @@ module.exports = {
     
     module: {
         rules: [
+            /*
             {
                 test: /\.js$/, 
                 exclude: /node_modules/, 
@@ -68,6 +69,8 @@ module.exports = {
                     }
                 }
             },
+            */
+            
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
@@ -79,6 +82,7 @@ module.exports = {
                     }
                 ]
             },
+            
             {
                 test: /\.scss$/,
                 use: [
