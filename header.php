@@ -24,7 +24,7 @@
 <div id="page" class="site">
 
 	
-	<header>
+	<header id="masthead" class="site-header">
 		<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 fixed-top bg-white border-bottom box-shadow">
 		<h5 class="my-0 mr-md-auto font-weight-normal"><img src="<?php echo get_template_directory_uri(); ?>/build/images/weext_logo-240x66.png" ></h5>
 		<nav class="my-2 my-md-0 mr-md-3">
@@ -38,67 +38,6 @@
 		</nav>
 		</div>
 	</header>
-
-	<main role="main">
-
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-			<img class="first-slide" src="images/banner1.jpg" alt="First slide">
-			<div class="container">
-				<div class="carousel-caption text-left">
-				<h1>Example headline.</h1>
-				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-					Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-				<p>
-					<a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a>
-				</p>
-				</div>
-			</div>
-			</div>
-			<div class="carousel-item">
-			<img class="second-slide" src="images/banner2.jpg" alt="Second slide">
-			<div class="container">
-				<div class="carousel-caption">
-				<h1>Another example headline.</h1>
-				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-					Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-				<p>
-					<a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
-				</p>
-				</div>
-			</div>
-			</div>
-			<div class="carousel-item">
-			<img class="third-slide" src="images/banner1.jpg" alt="Third slide">
-			<div class="container">
-				<div class="carousel-caption text-right">
-				<h1>One more for good measure.</h1>
-				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-					Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-				<p>
-					<a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a>
-				</p>
-				</div>
-			</div>
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-		</div>
-
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'weext-corp' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
