@@ -170,3 +170,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('theme-js', get_template_directory_uri() . "/build/" . $main->js, ['jquery'], null, true);
 }, 100);
 
+define('ADMIN_PATH', get_template_directory().'/admin');
+
+if ( is_admin() ) {
+	require_once(ADMIN_PATH.'/admin-init.php');
+	}
